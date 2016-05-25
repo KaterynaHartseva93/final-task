@@ -1,0 +1,21 @@
+<project name="MySQL">
+
+	<path id="classpath">
+		<fileset dir="webapp/WEB-INF/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<!--  To run db-create.sql script  -->
+	<target name="run-db-create">
+		<sql userid="root" password="asdZXC123" url="jdbc:mysql://localhost:3306" driver="com.mysql.jdbc.Driver" classpathref="classpath">
+			<transaction src="sql/dbcreate-mysql.sql" />
+		</sql>
+	</target>
+	<!--  To run select.sql script  -->
+	<target name="run-select">
+		<sql userid="root" password="asdZXC123" url="jdbc:mysql://localhost:3306" driver="com.mysql.jdbc.Driver" classpathref="classpath">
+			<transaction src="sql/select.sql" />
+		</sql>
+	</target>
+</project>

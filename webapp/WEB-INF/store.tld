@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd
+http://java.sun.com/xml/ns/j2ee ">
+    <tlib-version>2.0</tlib-version>
+    <short-name>store</short-name>
+    <uri>http://store.kateryna_hartseva.epam.com</uri>
+
+    <!-- Tag files -->
+    <tag-file>
+        <name>menu</name>
+        <path>/WEB-INF/tags/menu.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>li</name>
+        <path>/WEB-INF/tags/li.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>login-form</name>
+        <path>/WEB-INF/tags/login-form.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>page-info</name>
+        <path>/WEB-INF/tags/page-info.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>display-products</name>
+        <path>/WEB-INF/tags/display-products.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>cart</name>
+        <path>/WEB-INF/tags/cart.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>pagination</name>
+        <path>/WEB-INF/tags/pagination.tag</path>
+    </tag-file>
+    <tag-file>
+        <name>display-product-actions</name>
+        <path>/WEB-INF/tags/display-product-actions.tag</path>
+    </tag-file>
+    
+    <!-- Defined functions -->
+    <function>
+        <name>getRole</name>
+        <function-class>ua.nure.hartseva.SummaryTask4.Functions</function-class>
+        <function-signature>ua.nure.hartseva.SummaryTask4.entity.Role getRole(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+    
+    <function>
+        <name>getOppositeStatus</name>
+        <function-class>ua.nure.hartseva.SummaryTask4.Functions</function-class>
+        <function-signature>ua.nure.hartseva.SummaryTask4.entity.Status getOppositeStatus(ua.nure.hartseva.SummaryTask4.entity.Status)</function-signature>
+    </function>
+    
+    <function>
+        <name>containsInArray</name>
+        <function-class>ua.nure.hartseva.SummaryTask4.Functions</function-class>
+        <function-signature>boolean containsInArray(java.util.List, java.lang.Object)</function-signature>
+    </function>
+    
+    <function>
+    	<name>printDate</name>
+        <function-class>ua.nure.hartseva.SummaryTask4.Functions</function-class>
+        <function-signature>boolean printDate(java.util.Date)</function-signature>
+    </function>
+    
+    <function>
+    	<name>round</name>
+        <function-class>ua.nure.hartseva.SummaryTask4.Functions</function-class>
+        <function-signature>double round(double)</function-signature>
+    </function>
+
+</taglib>

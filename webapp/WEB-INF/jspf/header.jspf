@@ -1,0 +1,33 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<header>
+	<div class="left-column">
+		<c:forEach items="${applicationScope['access'].pageView}"
+			var="pageItem">
+			<c:if
+				test="${pageItem.role.toString() eq store:getRole(pageContext.request).value}">
+				<a class="logo-link"
+					href="${contextPath}/controller/${pageItem.homePage}"> <span
+					style="color: #FFFEC7;">M</span>a<span style="color: #CFFAFC;">g</span>d<span
+					style="color: #FFC7FE;">a</span>l<span style="color: #C7FFC8;">e</span>na
+				</a>
+			</c:if>
+		</c:forEach>
+
+	</div>
+
+	<div class="right-column">
+		<c:choose>
+			<c:when test="${not empty sessionScope.user}">
+				<a class="logout-link" href="${contextPath}/controller/sign-out">
+					${sessionScope.user.firstName}&nbsp;${sessionScope.user.lastName}</a>
+			</c:when>
+			<c:otherwise>
+				<a class="logout-link" href="#">&nbsp;</a>
+			</c:otherwise>
+		</c:choose>
+	</div>
+	<div class="center-header">
+		<a href="${contextPath}/controller/change-locale?lang=ru">Русский</a>
+		<i>|</i> <a href="${contextPath}/controller/change-locale?lang=en">English</a>
+	</div>
+</header>

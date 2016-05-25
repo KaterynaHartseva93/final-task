@@ -1,0 +1,13 @@
+<%@ include file="/WEB-INF/jspf/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/taglib.jspf"%>
+
+<link href="${contextPath}/style/reset.css" rel="stylesheet"
+	type="text/css" />
+<link href="${contextPath}/style/users.css" rel="stylesheet"
+	type="text/css" />
+<link href="${contextPath}/style/style.css" rel="stylesheet"
+	type="text/css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="${contextPath}/js/jquery-1.12.0.min.js"></script>
+<script src="${contextPath}/js/script.js"></script>

@@ -1,0 +1,14 @@
+<%@ taglib uri="http://store.kateryna_hartseva.epam.com" prefix="store"%>
+<footer>
+	<div id="footer-content">
+		Clothes Store "Magdalena"<br> ©&nbsp;Kateryna Hartseva
+	</div>
+	<div class="overlay"></div>
+	<input type="hidden" id="global-context-path" value="${pageContext.request.contextPath}"/>
+	<input type="hidden" id="global-user-role" value="${store:getRole(pageContext.request)}"/>
+	<input type="hidden" id="link-add-identifier-text" value="<fmt:message key='add-to-cart'/>"/>
+	<input type="hidden" id="clothes-has-no-sizes" value="<fmt:message key='when-product-has-no-sizes'/>"/>
+	<input type="hidden" id="save-product-button-text" value="<fmt:message key='save'/>"/>
+	<input type="hidden" id="delete-product-button-text" value="<fmt:message key='delete'/>"/>
+				
+</footer>
